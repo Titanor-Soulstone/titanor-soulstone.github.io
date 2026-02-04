@@ -1,3 +1,14 @@
+---
+layout: layouts/home.njk
+---
+
+# Hello World!
+
+Welcome to my blog!
+
+### Posts
+
+
 # titanor-soulstone.github.io
 
 
