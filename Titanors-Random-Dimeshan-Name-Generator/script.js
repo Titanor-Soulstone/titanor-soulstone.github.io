@@ -100,7 +100,11 @@ var LastNameParts = [
 
 function generate_last_name() {
 	var randomLastNamePart1 = LastNameParts[Math.floor(Math.random() * LastNameParts.length)];
-	var randomLastNamePart2 = LastNameParts[Math.floor(Math.random() * LastNameParts.length)].toLowerCase();
+	var randomLastNamePart2 = LastNameParts[Math.floor(Math.random() * LastNameParts.length)];
+	while (randomLastNamePart1 === randomLastNamePart2) {
+		randomLastNamePart2 = LastNameParts[Math.floor(Math.random() * LastNameParts.length)];
+	}
+	randomLastNamePart2 = randomLastNamePart2.toLowerCase();
 	var result = randomLastNamePart1 + randomLastNamePart2;
 	return result;
 }
