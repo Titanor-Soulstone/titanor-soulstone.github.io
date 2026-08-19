@@ -141,7 +141,18 @@ document.addEventListener('DOMContentLoaded', () => {
 function button_call_generate_names() {
 	var names = [];
 	for (var i = 0; i < 10; i++) {
-		var name = generate_given_name() + " " + generate_last_name();
+		var firstName = generate_given_name();
+		if (firstName == 'Titanor') {
+			firstName = '<span style="color: gold; background-color: black;">' + firstName + '</span>';
+		}
+		var lastName = generate_last_name();
+		if (lastName == 'Soulstone') {
+			lastName = '<span style="color: gold; background-color: black;">' + lastName + '</span>';
+		}
+		var name = firstName + " " + lastName;
+		if (name == '<span style="color: gold; background-color: black;">Titanor</span> <span style="color: gold; background-color: black;">Soulstone</span>') {
+			name = '<span style="color: gold; background-color: black;">Titanor Soulstone</span>';
+		}
 		names.unshift(name);
 		namehistory.unshift(name);
 		if (namehistory.length > 100) {
