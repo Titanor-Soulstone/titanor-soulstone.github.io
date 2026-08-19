@@ -132,7 +132,7 @@ function button_call_generate_names() {
 		names.unshift(name);
 		namehistory.unshift(name);
 		if (namehistory.length > 100) {
-			namehistory.pop();
+			namehistory.splice(-1, 1);
 		}
 	}
 	console.log(names);
