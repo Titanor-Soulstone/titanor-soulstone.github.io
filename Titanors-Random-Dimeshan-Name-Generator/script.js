@@ -108,8 +108,13 @@ function generate_last_name() {
 // Button call
 
 var namehistory = [];
+var storedHistory = null;
 
-var storedHistory = localStorage.getItem("namehistory");
+if (typeof window !== 'undefined') {
+	storedHistory = localStorage.getItem("namehistory");
+	console.log("Stored history: " + storedHistory);
+}
+
 if (storedHistory) {
 	namehistory = JSON.parse(storedHistory);
 	document.getElementById("history").innerHTML = namehistory.join("<br>");
