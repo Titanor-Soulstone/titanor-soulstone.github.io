@@ -13,7 +13,7 @@ Welcome to my blog!
 
 ---
 
-[Titanor's Random Dimeshan Name Generator]{https://titanor-soulstone.github.io/Titanors-Random-Dimeshan-Name-Generator/}
+[Titanor's Random Dimeshan Name Generator](https://titanor-soulstone.github.io/Titanors-Random-Dimeshan-Name-Generator/)
 
 ---
 
