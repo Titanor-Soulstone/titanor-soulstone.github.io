@@ -128,7 +128,7 @@ function button_call_generate_names() {
 		namehistory.unshift(name);
 	}
 	console.log(names);
-	localStorage.setItem("namehistory", JSON.stringify(namehistory));
+	console.log(localStorage.setItem("namehistory", JSON.stringify(namehistory)));
 	document.getElementById("generated-names").innerHTML = names.join("<br>");
 	document.getElementById("history").innerHTML = namehistory.join("<br>");
 }
