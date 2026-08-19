@@ -132,7 +132,9 @@ function button_call_generate_names() {
 		names.unshift(name);
 		namehistory.unshift(name);
 		if (namehistory.length > 100) {
-			namehistory.splice(-1, 1);
+			for (var j = 0; j < namehistory.length - 100; j++) {
+				namehistory.splice(-1, 1);
+			}
 		}
 	}
 	console.log(names);
