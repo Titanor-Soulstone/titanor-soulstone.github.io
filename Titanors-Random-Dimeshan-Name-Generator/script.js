@@ -118,7 +118,10 @@ function get_history() {
 	}
 }
 
-get_history();
+document.addEventListener('DOMContentLoaded', () => {
+    // Your localStorage and innerHTML code goes here
+	get_history();
+});
 
 // Button call
 
