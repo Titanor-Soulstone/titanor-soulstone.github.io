@@ -123,6 +123,18 @@ document.addEventListener('DOMContentLoaded', () => {
 	get_history();
 });
 
+// history limit - delete oldest entries if history exceeds 100 names
+
+function limit_history() {
+	if (namehistory.length > 100) {
+		for (var i = namehistory.length - 1; i >= 100; i--) {
+			namehistory.splice(i, 1);
+			localStorage.setItem("namehistory", JSON.stringify(namehistory));
+			document.getElementById("history").innerHTML = namehistory.join("<br>");
+		}
+	}
+}
+
 // Button call
 
 function button_call_generate_names() {
@@ -136,6 +148,7 @@ function button_call_generate_names() {
 	localStorage.setItem("namehistory", JSON.stringify(namehistory));
 	document.getElementById("generated-names").innerHTML = names.join("<br>");
 	document.getElementById("history").innerHTML = namehistory.join("<br>");
+	limit_history();
 }
 
 function clear_history() {
@@ -144,10 +157,3 @@ function clear_history() {
 	document.getElementById("history").innerHTML = "";
 }
 
-// history limit - delete oldest entries if history exceeds 100 names
-
-if (namehistory.length > 100) {
-	for (var i = namehistory.length - 1; i >= 100; i--) {
-		namehistory.pop();
-	}
-}
