@@ -42,7 +42,7 @@ var PreSylable = [
 
 var PostSylable = [
 	'bab', 'baab', 'baf', 'baig', 'baag', 'bag', 'bah', 'bor', 'bore', 'biar', 'bar', 'bia', 'bif', 'been', 'beem', 'beel', 'buar', 'bare', 'big',
-	'cab', 'caab', 'caf', 'caig', 'caag', 'cag', 'cah', 'cor', 'core', 'ciar', 'car', 'cia', 'cif', 'ceen', 'ceem', 'ceel', 'cuar', 'care', 'cig',
+	'cab', 'caab', 'caf', 'caig', 'caag', 'cag', 'cah', 'cor', 'core', 'ciar', 'car', 'cia', 'cif', 'ceen', 'ceem', 'ceel', 'cuar', 'care', 'cig', 'chore',
 	'dab', 'daab', 'daf', 'daig', 'daag', 'dag', 'dah', 'dor', 'dore', 'diar', 'dar', 'dia', 'dif', 'deen', 'deem', 'deel', 'duar', 'dare', 'dig',
 	'fab', 'faab', 'faf', 'faig', 'faag', 'fag', 'fah', 'for', 'fore', 'fiar', 'far', 'fia', 'fif', 'feen', 'feem', 'feel', 'fuar', 'fare', 'fig',
 	'gab', 'gaab', 'gaf', 'gaig', 'gaag', 'gag', 'gah', 'gor', 'gore', 'giar', 'gar', 'gia', 'gif', 'geen', 'geem', 'geel', 'guar', 'gare', 'gig',
@@ -54,14 +54,14 @@ var PostSylable = [
 	'nab', 'naab', 'naf', 'naig', 'naag', 'nag', 'nah', 'nor', 'nore', 'niar', 'nar', 'nia', 'nif', 'neen', 'neem', 'neel', 'nuar', 'nare', 'nig',
 	'pab', 'paab', 'paf', 'paig', 'paag', 'pag', 'pah', 'por', 'pore', 'piar', 'par', 'pia', 'pif', 'peen', 'peem', 'peel', 'puar', 'pare', 'pig',
 	'qab', 'qaab', 'qaf', 'qaig', 'qaag', 'qag', 'qah', 'qor', 'qore', 'qiar', 'qar', 'qia', 'qif', 'qeen', 'qeem', 'qeel', 'quar', 'qare', 'qig',
-	'rab', 'raab', 'raf', 'raig', 'raag', 'rag', 'rah', 'ror', 'nore', 'riar', 'rar', 'ria', 'rif', 'reen', 'reem', 'reel', 'ruar', 'rare', 'rig',
-	'sab', 'saab', 'saf', 'saig', 'saag', 'sag', 'sah', 'sor', 'sore', 'siar', 'sar', 'sia', 'sif', 'seen', 'seem', 'seel', 'suar', 'sare', 'sig',
-	'tab', 'taab', 'taf', 'taig', 'taag', 'tag', 'tah', 'tor', 'tore', 'tiar', 'tar', 'tia', 'tif', 'teen', 'teem', 'teel', 'tuar', 'tare', 'tig',
+	'rab', 'raab', 'raf', 'raig', 'raag', 'rag', 'rah', 'ror', 'rore', 'riar', 'rar', 'ria', 'rif', 'reen', 'reem', 'reel', 'ruar', 'rare', 'rig',
+	'sab', 'saab', 'saf', 'saig', 'saag', 'sag', 'sah', 'sor', 'sore', 'siar', 'sar', 'sia', 'sif', 'seen', 'seem', 'seel', 'suar', 'sare', 'sig', 'shore',
+	'tab', 'taab', 'taf', 'taig', 'taag', 'tag', 'tah', 'tor', 'tore', 'tiar', 'tar', 'tia', 'tif', 'teen', 'teem', 'teel', 'tuar', 'tare', 'tig', 'thore',
 	'vab', 'vaab', 'vaf', 'vaig', 'vaag', 'vag', 'vah', 'vor', 'vore', 'viar', 'var', 'via', 'vif', 'veen', 'veem', 'veel', 'vuar', 'vare', 'vig',
 	'wab', 'waab', 'waf', 'waig', 'waag', 'wag', 'wah', 'wor', 'wore', 'wiar', 'war', 'wia', 'wif', 'ween', 'weem', 'weel', 'wuar', 'ware', 'wig',
-	'xab', 'xaab', 'xaf', 'xaig', 'xaag', 'xag', 'xah', 'xor', 'xore', 'xiar', 'xar', 'xia', 'xif', 'xeen', 'xeem', 'xeel', 'xuar', 'xare', 'xig',
+	'xab', 'xaab', 'xaf', 'xaig', 'xaag', 'xag', 'xah', 'xor', 'xore', 'xiar', 'xar', 'xia', 'xif', 'xeen', 'xeem', 'xeel', 'xuar', 'xare', 'xig', 'xhore',
 	'yab', 'yaab', 'yaf', 'yaig', 'yaag', 'yag', 'yah', 'yor', 'yore', 'viar', 'yar', 'yia', 'yif', 'yeen', 'yeem', 'yeel', 'yuar', 'yare', 'yig',
-	'zab', 'zaab', 'zaf', 'zaig', 'zaag', 'zag', 'zah', 'zor', 'zore', 'ziar', 'zar', 'zia', 'zif', 'zeen', 'zeem', 'zeel', 'zuar', 'zare', 'zig'
+	'zab', 'zaab', 'zaf', 'zaig', 'zaag', 'zag', 'zah', 'zor', 'zore', 'ziar', 'zar', 'zia', 'zif', 'zeen', 'zeem', 'zeel', 'zuar', 'zare', 'zig', 'zhore'
 ]
 
 function generate_given_name() {
