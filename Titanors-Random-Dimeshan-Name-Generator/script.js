@@ -9,6 +9,7 @@
 // Pre-sylables - these two letter combinations make up the first one or two sections of a given name, for example, Ti, Tita, Tala, La, and so on.
 
 var PreSylable = [
+	'A',  'E',  'I',  'O',  'U',
 	'Aa', 'Ae', 'Ai', 'Ao', 'Au',
 	'Ba', 'Be', 'Bi', 'Bo', 'Bu',
 	'Ca', 'Ce', 'Ci', 'Co', 'Cu',
@@ -40,27 +41,27 @@ var PreSylable = [
 // Post-sylables - these three to four letter combinations make up the last section of a given name, for example, -nor, -lar, -lia, -more, and so on.
 
 var PostSylable = [
-	'bab', 'baab', 'baf', 'baig', 'baag', 'bag', 'bah', 'bor', 'bore', 'biar', 'bar', 'bia', 'bif', 'been', 'beem', 'beel', 'buar',
-	'cab', 'caab', 'caf', 'caig', 'caag', 'cag', 'cah', 'cor', 'core', 'ciar', 'car', 'cia', 'cif', 'ceen', 'ceem', 'ceel', 'cuar',
-	'dab', 'daab', 'daf', 'daig', 'daag', 'dag', 'dah', 'dor', 'dore', 'diar', 'dar', 'dia', 'dif', 'deen', 'deem', 'deel', 'duar',
-	'fab', 'faab', 'faf', 'faig', 'faag', 'fag', 'fah', 'for', 'fore', 'fiar', 'far', 'fia', 'fif', 'feen', 'feem', 'feel', 'fuar',
-	'gab', 'gaab', 'gaf', 'gaig', 'gaag', 'gag', 'gah', 'gor', 'gore', 'giar', 'gar', 'gia', 'gif', 'geen', 'geem', 'geel', 'guar',
-	'hab', 'haab', 'haf', 'haig', 'haag', 'hag', 'hah', 'hor', 'hore', 'hiar', 'har', 'hia', 'hif', 'heen', 'heem', 'heel', 'huar',
-	'jab', 'jaab', 'jaf', 'jaig', 'jaag', 'jag', 'jah', 'jor', 'jore', 'jiar', 'jar', 'jia', 'jif', 'jeen', 'jeem', 'jeel', 'juar',
-	'kab', 'kaab', 'kaf', 'kaig', 'kaag', 'kag', 'kah', 'kor', 'kore', 'kiar', 'kar', 'kia', 'kif', 'keen', 'keem', 'keel', 'kuar',
-	'lab', 'laab', 'laf', 'laig', 'laag', 'lag', 'lah', 'lor', 'lore', 'liar', 'lar', 'lia', 'lif', 'leen', 'leem', 'leel', 'luar',
-	'mab', 'maab', 'maf', 'maig', 'maag', 'mag', 'mah', 'mor', 'more', 'miar', 'mar', 'mia', 'mif', 'meen', 'meem', 'meel', 'muar',
-	'nab', 'naab', 'naf', 'naig', 'naag', 'nag', 'nah', 'nor', 'nore', 'niar', 'nar', 'nia', 'nif', 'neen', 'neem', 'neel', 'nuar',
-	'pab', 'paab', 'paf', 'paig', 'paag', 'pag', 'pah', 'por', 'pore', 'piar', 'par', 'pia', 'pif', 'peen', 'peem', 'peel', 'puar',
-	'qab', 'qaab', 'qaf', 'qaig', 'qaag', 'qag', 'qah', 'qor', 'qore', 'qiar', 'qar', 'qia', 'qif', 'qeen', 'qeem', 'qeel', 'quar',
-	'rab', 'raab', 'raf', 'raig', 'raag', 'rag', 'rah', 'ror', 'nore', 'riar', 'rar', 'ria', 'rif', 'reen', 'reem', 'reel', 'ruar',
-	'sab', 'saab', 'saf', 'saig', 'saag', 'sag', 'sah', 'sor', 'sore', 'siar', 'sar', 'sia', 'sif', 'seen', 'seem', 'seel', 'suar',
-	'tab', 'taab', 'taf', 'taig', 'taag', 'tag', 'tah', 'tor', 'tore', 'tiar', 'tar', 'tia', 'tif', 'teen', 'teem', 'teel', 'tuar',
-	'vab', 'vaab', 'vaf', 'vaig', 'vaag', 'vag', 'vah', 'vor', 'vore', 'viar', 'var', 'via', 'vif', 'veen', 'veem', 'veel', 'vuar',
-	'wab', 'waab', 'waf', 'waig', 'waag', 'wag', 'wah', 'wor', 'wore', 'wiar', 'war', 'wia', 'wif', 'ween', 'weem', 'weel', 'wuar',
-	'xab', 'xaab', 'xaf', 'xaig', 'xaag', 'xag', 'xah', 'xor', 'xore', 'xiar', 'xar', 'xia', 'xif', 'xeen', 'xeem', 'xeel', 'xuar',
-	'yab', 'yaab', 'yaf', 'yaig', 'yaag', 'yag', 'yah', 'yor', 'yore', 'viar', 'yar', 'yia', 'yif', 'yeen', 'yeem', 'yeel', 'yuar',
-	'zab', 'zaab', 'zaf', 'zaig', 'zaag', 'zag', 'zah', 'zor', 'zore', 'ziar', 'zar', 'zia', 'zif', 'zeen', 'zeem', 'zeel', 'zuar'
+	'bab', 'baab', 'baf', 'baig', 'baag', 'bag', 'bah', 'bor', 'bore', 'biar', 'bar', 'bia', 'bif', 'been', 'beem', 'beel', 'buar', 'bare', 'big',
+	'cab', 'caab', 'caf', 'caig', 'caag', 'cag', 'cah', 'cor', 'core', 'ciar', 'car', 'cia', 'cif', 'ceen', 'ceem', 'ceel', 'cuar', 'care', 'cig',
+	'dab', 'daab', 'daf', 'daig', 'daag', 'dag', 'dah', 'dor', 'dore', 'diar', 'dar', 'dia', 'dif', 'deen', 'deem', 'deel', 'duar', 'dare', 'dig',
+	'fab', 'faab', 'faf', 'faig', 'faag', 'fag', 'fah', 'for', 'fore', 'fiar', 'far', 'fia', 'fif', 'feen', 'feem', 'feel', 'fuar', 'fare', 'fig',
+	'gab', 'gaab', 'gaf', 'gaig', 'gaag', 'gag', 'gah', 'gor', 'gore', 'giar', 'gar', 'gia', 'gif', 'geen', 'geem', 'geel', 'guar', 'gare', 'gig',
+	'hab', 'haab', 'haf', 'haig', 'haag', 'hag', 'hah', 'hor', 'hore', 'hiar', 'har', 'hia', 'hif', 'heen', 'heem', 'heel', 'huar', 'hare', 'hig',
+	'jab', 'jaab', 'jaf', 'jaig', 'jaag', 'jag', 'jah', 'jor', 'jore', 'jiar', 'jar', 'jia', 'jif', 'jeen', 'jeem', 'jeel', 'juar', 'jare', 'jig',
+	'kab', 'kaab', 'kaf', 'kaig', 'kaag', 'kag', 'kah', 'kor', 'kore', 'kiar', 'kar', 'kia', 'kif', 'keen', 'keem', 'keel', 'kuar', 'kare', 'kig',
+	'lab', 'laab', 'laf', 'laig', 'laag', 'lag', 'lah', 'lor', 'lore', 'liar', 'lar', 'lia', 'lif', 'leen', 'leem', 'leel', 'luar', 'lare', 'lig',
+	'mab', 'maab', 'maf', 'maig', 'maag', 'mag', 'mah', 'mor', 'more', 'miar', 'mar', 'mia', 'mif', 'meen', 'meem', 'meel', 'muar', 'mare', 'mig',
+	'nab', 'naab', 'naf', 'naig', 'naag', 'nag', 'nah', 'nor', 'nore', 'niar', 'nar', 'nia', 'nif', 'neen', 'neem', 'neel', 'nuar', 'nare', 'nig',
+	'pab', 'paab', 'paf', 'paig', 'paag', 'pag', 'pah', 'por', 'pore', 'piar', 'par', 'pia', 'pif', 'peen', 'peem', 'peel', 'puar', 'pare', 'pig',
+	'qab', 'qaab', 'qaf', 'qaig', 'qaag', 'qag', 'qah', 'qor', 'qore', 'qiar', 'qar', 'qia', 'qif', 'qeen', 'qeem', 'qeel', 'quar', 'qare', 'qig',
+	'rab', 'raab', 'raf', 'raig', 'raag', 'rag', 'rah', 'ror', 'nore', 'riar', 'rar', 'ria', 'rif', 'reen', 'reem', 'reel', 'ruar', 'rare', 'rig',
+	'sab', 'saab', 'saf', 'saig', 'saag', 'sag', 'sah', 'sor', 'sore', 'siar', 'sar', 'sia', 'sif', 'seen', 'seem', 'seel', 'suar', 'sare', 'sig',
+	'tab', 'taab', 'taf', 'taig', 'taag', 'tag', 'tah', 'tor', 'tore', 'tiar', 'tar', 'tia', 'tif', 'teen', 'teem', 'teel', 'tuar', 'tare', 'tig',
+	'vab', 'vaab', 'vaf', 'vaig', 'vaag', 'vag', 'vah', 'vor', 'vore', 'viar', 'var', 'via', 'vif', 'veen', 'veem', 'veel', 'vuar', 'vare', 'vig',
+	'wab', 'waab', 'waf', 'waig', 'waag', 'wag', 'wah', 'wor', 'wore', 'wiar', 'war', 'wia', 'wif', 'ween', 'weem', 'weel', 'wuar', 'ware', 'wig',
+	'xab', 'xaab', 'xaf', 'xaig', 'xaag', 'xag', 'xah', 'xor', 'xore', 'xiar', 'xar', 'xia', 'xif', 'xeen', 'xeem', 'xeel', 'xuar', 'xare', 'xig',
+	'yab', 'yaab', 'yaf', 'yaig', 'yaag', 'yag', 'yah', 'yor', 'yore', 'viar', 'yar', 'yia', 'yif', 'yeen', 'yeem', 'yeel', 'yuar', 'yare', 'yig',
+	'zab', 'zaab', 'zaf', 'zaig', 'zaag', 'zag', 'zah', 'zor', 'zore', 'ziar', 'zar', 'zia', 'zif', 'zeen', 'zeem', 'zeel', 'zuar', 'zare', 'zig'
 ]
 
 function generate_given_name() {
