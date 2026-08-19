@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function limit_history() {
 	if (namehistory.length > 100) {
 		for (var i = namehistory.length - 1; i >= 100; i--) {
-			namehistory.splice(i, 1);
+			namehistory.splice(-1);
 			localStorage.setItem("namehistory", JSON.stringify(namehistory));
 			document.getElementById("history").innerHTML = namehistory.join("<br>");
 		}
