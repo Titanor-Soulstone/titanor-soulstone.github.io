@@ -123,18 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	get_history();
 });
 
-// history limit - delete oldest entries if history exceeds 100 names
-
-function limit_history() {
-	if (namehistory.length > 100) {
-		for (var i = namehistory.length - 1; i >= 100; i--) {
-			namehistory.splice(-1);
-			localStorage.setItem("namehistory", JSON.stringify(namehistory));
-			document.getElementById("history").innerHTML = namehistory.join("<br>");
-		}
-	}
-}
-
 // Button call
 
 function button_call_generate_names() {
@@ -143,12 +131,14 @@ function button_call_generate_names() {
 		var name = generate_given_name() + " " + generate_last_name();
 		names.unshift(name);
 		namehistory.unshift(name);
+		if (namehistory.length > 100) {
+			namehistory.pop();
+		}
 	}
 	console.log(names);
 	localStorage.setItem("namehistory", JSON.stringify(namehistory));
 	document.getElementById("generated-names").innerHTML = names.join("<br>");
 	document.getElementById("history").innerHTML = namehistory.join("<br>");
-	limit_history();
 }
 
 function clear_history() {
