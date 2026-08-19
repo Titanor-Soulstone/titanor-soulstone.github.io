@@ -105,20 +105,22 @@ function generate_last_name() {
 	return result;
 }
 
-// Button call
+// History
 
 var namehistory = [];
-var storedHistory = [];
 
-if (typeof window !== 'undefined') {
-	storedHistory = localStorage.getItem("namehistory");
+function get_history() {
+	var storedHistory = localStorage.getItem("namehistory");
+	if (storedHistory !== null) {
+		namehistory = JSON.parse(storedHistory);
+		console.log(namehistory);
+		document.getElementById("history").innerHTML = namehistory.join("<br>");
+	}
 }
 
-if (storedHistory !== [] && storedHistory !== null) {
-	namehistory = JSON.parse(storedHistory);
-	console.log(namehistory);
-	document.getElementById("history").innerHTML = namehistory.join("<br>");
-}
+get_history();
+
+// Button call
 
 function button_call_generate_names() {
 	var names = [];
