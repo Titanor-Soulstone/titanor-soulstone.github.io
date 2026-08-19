@@ -144,9 +144,10 @@ function clear_history() {
 	document.getElementById("history").innerHTML = "";
 }
 
-// history limit
+// history limit - delete oldest entries if history exceeds 100 names
 
 if (namehistory.length > 100) {
 	namehistory = namehistory.slice(0, 100);
 	localStorage.setItem("namehistory", JSON.stringify(namehistory));
+	document.getElementById("history").innerHTML = namehistory.join("<br>");
 }
