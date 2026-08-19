@@ -112,11 +112,11 @@ var storedHistory = null;
 
 if (typeof window !== 'undefined') {
 	storedHistory = localStorage.getItem("namehistory");
-	console.log("Stored history: " + storedHistory);
 }
 
 if (storedHistory) {
 	namehistory = JSON.parse(storedHistory);
+	console.log(namehistory);
 	document.getElementById("history").innerHTML = namehistory.join("<br>");
 }
 
