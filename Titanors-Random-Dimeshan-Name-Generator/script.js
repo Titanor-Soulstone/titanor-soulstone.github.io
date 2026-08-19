@@ -14,7 +14,7 @@ var PreSylable = [
 	'Ca', 'Ce', 'Ci', 'Co', 'Cu',
 	'Da', 'De', 'Di', 'Do',	'Du',
 	'Ea', 'Ee', 'Ei', 'Eo', 'Eu',
-	'Fa',	'Fe', 'Fi', 'Fo', 'Fu',
+	'Fa', 'Fe', 'Fi', 'Fo', 'Fu',
 	'Ga', 'Ge', 'Gi', 'Go', 'Gu',
 	'Ha', 'He', 'Hi', 'Ho', 'Hu',
 	'Ia', 'Ie', 'Ii', 'Io', 'Iu',
@@ -128,7 +128,7 @@ function button_call_generate_names() {
 		namehistory.unshift(name);
 	}
 	console.log(names);
-	console.log(localStorage.setItem("namehistory", JSON.stringify(namehistory)));
+	localStorage.setItem("namehistory", JSON.stringify(namehistory));
 	document.getElementById("generated-names").innerHTML = names.join("<br>");
 	document.getElementById("history").innerHTML = namehistory.join("<br>");
 }
