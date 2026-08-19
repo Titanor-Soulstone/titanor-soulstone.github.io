@@ -119,7 +119,7 @@ function get_history() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Your localStorage and innerHTML code goes here
+  // Your localStorage and innerHTML code goes here
 	get_history();
 });
 
@@ -142,4 +142,11 @@ function clear_history() {
 	namehistory = [];
 	localStorage.removeItem("namehistory");
 	document.getElementById("history").innerHTML = "";
+}
+
+// history limit
+
+if (namehistory.length > 100) {
+	namehistory = namehistory.slice(0, 100);
+	localStorage.setItem("namehistory", JSON.stringify(namehistory));
 }
