@@ -114,7 +114,7 @@ if (typeof window !== 'undefined') {
 	storedHistory = localStorage.getItem("namehistory");
 }
 
-if (storedHistory) {
+if (storedHistory !== null) {
 	namehistory = JSON.parse(storedHistory);
 	console.log(namehistory);
 	document.getElementById("history").innerHTML = namehistory.join("<br>");
