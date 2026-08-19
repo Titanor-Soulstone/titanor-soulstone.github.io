@@ -125,6 +125,13 @@ function get_history() {
 document.addEventListener('DOMContentLoaded', () => {
   // Your localStorage and innerHTML code goes here
 	get_history();
+	var possible_given_names = (PreSylable.length * PostSylable.length) + (PreSylable.length * PreSylable.length * PostSylable.length);
+	var possible_surnames = LastNameParts.length * (LastNameParts.length - 1);
+	var possible_full_names = possible_given_names * possible_surnames;
+	console.log("This generator can generate " + possible_given_names + " unique given names.");
+	console.log("This generator can generate " + possible_surnames + " possible surnames.");
+	console.log("This generator can generate " + possible_full_names + " possible full names.");
+	document.getElementById("possible-names").innerHTML = "This generator can generate " + possible_given_names + " unique given names, " + possible_surnames + " possible surnames, and " + possible_full_names + " possible full names.";
 });
 
 // Button call
