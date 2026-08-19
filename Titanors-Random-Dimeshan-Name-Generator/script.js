@@ -1,21 +1,5 @@
 // file format: JavaScript
 
-// required cookie functions
-
-function getArrayCookie(name) {
-	const cookieString = document.cookie;
-  const cookies = cookieString.split('; '); // Split into individual cookies
-
-	for (let cookie of cookies) {
-    const [key, value] = cookie.split('=');
-    if (key === name) {
-      // Decode and parse the JSON string back into a JavaScript array
-      return JSON.parse(decodeURIComponent(value));
-    }
-  }
-  return null; // Return null if cookie is not found
-}
-
 // This script is for generating random Dimeshan character names for use in Telnian Legends, and it is called via HTML.
 
 // Given names 
@@ -125,8 +109,10 @@ function generate_last_name() {
 
 var namehistory = [];
 
-if (getArrayCookie('namehistory') != null) {
-	namehistory = getArrayCookie('namehistory');
+var storedHistory = localStorage.getItem("namehistory");
+if (storedHistory) {
+	namehistory = JSON.parse(storedHistory);
+	document.getElementById("history").innerHTML = namehistory.join("<br>");
 }
 
 function button_call_generate_names() {
@@ -137,15 +123,13 @@ function button_call_generate_names() {
 		namehistory.unshift(name);
 	}
 	console.log(names);
-	var namehistoryJSON = JSON.stringify(namehistory);
-	var encodedNameHistory = encodeURIComponent(namehistoryJSON);
-	document.cookie = "namehistory=" + encodedNameHistory + "; path=/; max-age=31536000"; // 1 year
+	localStorage.setItem("namehistory", JSON.stringify(namehistory));
 	document.getElementById("generated-names").innerHTML = names.join("<br>");
 	document.getElementById("history").innerHTML = namehistory.join("<br>");
 }
 
 function clear_history() {
 	namehistory = [];
-	document.cookie = "namehistory=; path=/; max-age=0";
+	localStorage.removeItem("namehistory");
 	document.getElementById("history").innerHTML = "";
 }
